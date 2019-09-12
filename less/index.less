@@ -3,6 +3,26 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css?family=Crimson+Pro&display=swap');
+
+@main-color: lightgray;
+@main-font: 'Crimson Pro', serif;
+
+.center-content() {
+	display: flex;
+	justify-content: center;
+}
+
+.align-content() {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.space-evenly() {
+	display: flex;
+	justify-content: space-evenly;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -54,6 +74,69 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+.container {
+		header {
+			background: @main-color;
+			font-family: @main-font;
+			nav	{
+				.space-evenly();
+					a {
+						text-decoration: none;
+						color: black;
+					}/*closes a*/
+			}/*closes nav*/
+		}/* closes header*/
+		img {
+			display: flex;
+			justify-content: center;
+			margin-top: 25px;
+			margin-bottom: 25px;
+			margin-left: 25%;
+			width: 50%;
+			height: 10%;
+		}	/*closes img*/
+		.intro {
+			background: @main-color;
+			font-family: @main-font;
+			.align-content();
+			h1 {
+				font-size: 3rem;
+				padding: 1%;
+			}/*closes h1*/
+		}/*closes intro*/
+		.first-content {
+			margin-top: 2%;
+			margin-bottom: 2%;
+			.lineup-1 {
+				.space-evenly();
+				margin-bottom: 2%;
+			}/*closes lineup-1*/
+			.skills {
+				.space-evenly();
+				background-color: @main-color;
+				font-family: @main-font;				
+			}/*closes skills*/
+		}/*closes first-content*/
+		.second-content {
+			margin-top: 2%;
+			margin-bottom: 2%;
+			.lineup-2 {
+				.space-evenly();
+				margin-bottom: 2%;
+			}/*closes lineup-2*/
+			.contact {
+				.space-evenly();
+				background-color: @main-color;
+				font-family: @main-font;				
+			}/*closes contact*/
+		}/*closes second-content*/
+		footer {
+			background: @main-color;
+			font-family: @main-font;
+			.center-content();
+			margin-top: 2%;
+		}
+}/*closes container*/
